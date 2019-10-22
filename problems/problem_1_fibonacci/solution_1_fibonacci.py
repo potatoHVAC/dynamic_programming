@@ -41,6 +41,7 @@ def fibonacci(n: int) -> int:
 
 def fibonacci(n: int) -> int:
 
+    # Create Memoize
     memoize_fibonacci = {}
     def _fibonacci(n):
         if n == 1:
