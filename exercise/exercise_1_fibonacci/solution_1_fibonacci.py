@@ -12,9 +12,9 @@ def fibonacci(n: int) -> int:
     int -> nth term of sequence
     """
 
-    if n == 1:
+    if n == 0:
         return 0
-    if n == 2:
+    if n == 1:
         return 1
     
     return fibonacci(n - 1) + fibonacci(n - 2)
@@ -26,9 +26,9 @@ def fibonacci(n: int) -> int:
 def fibonacci(n: int) -> int:
     
     def _fibonacci(n):
-        if n == 1:
+        if n == 0:
             return 0
-        if n == 2:
+        if n == 1:
             return 1
     
         return fibonacci(n - 1) + fibonacci(n - 2)
@@ -44,9 +44,9 @@ def fibonacci(n: int) -> int:
     # Create Memoize
     memoize_fibonacci = {}
     def _fibonacci(n):
-        if n == 1:
+        if n == 0:
             return 0
-        if n == 2:
+        if n == 1:
             return 1
 
         # Check to see if value already exists
@@ -66,7 +66,7 @@ def fibonacci(n: int) -> int:
 
 def fibonacci(n: int) -> int:
 
-    memoize_fibonacci = {1: 0, 2: 1}
+    memoize_fibonacci = {0: 0, 1: 1}
     def _fibonacci(n):
         if n in memoize_fibonacci:
             return memoize_fibonacci[n]
@@ -83,7 +83,7 @@ def fibonacci(n: int) -> int:
 
 def fibonacci(n: int) -> int:
 
-    memoize_fibonacci = {1: 0, 2: 1}
+    memoize_fibonacci = {0: 0, 1: 1}
     def _fibonacci(n):
         if n not in memoize_fibonacci:
             nth_fibonacci = fibonacci(n - 1) + fibonacci(n - 2)
